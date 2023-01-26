@@ -53,36 +53,74 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by:P.JEBA PRINCY 
+RegisterNumber:22008375  
 */
+PROGRAM FOR UP COUNTER
+
+module de06(input clk,input reset,output[0:3]counter);
+reg[0:3]counter_down;
+always@(posedge clk or posedge reset)
+begin
+if (reset)
+counter_down<=4'd0;
+else 
+counter_down<=counter_down-4'd1;
+end
+assign counter=counter_down;
+endmodule
 
 
 
 
 
+### RTL LOGIC   
 
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+RTL FOR UP COUNTER
 
+![image](https://user-images.githubusercontent.com/122682918/214792060-a71526b6-c74b-4091-9aec-503fb335b1a0.png)
 
+TIMING DIGRAM FOR UP COUNTER
 
+![image](https://user-images.githubusercontent.com/122682918/214792262-d05353e8-85df-40fa-a7fc-8b5eccfd59f6.png)
 
+TRUTH TABLE FOR UP COUNTER
 
-
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
-
-
-
-
-
-### TRUTH TABLE 
+![image](https://user-images.githubusercontent.com/122682918/214792451-0e5a45e2-effc-4585-ab14-da17c062a70d.png)
 
 
 
+PROGRAM FOR DOWN COUNTER  
 
+Program for flipflops  and verify its truth table in quartus using Verilog programming.
+Developed by:P.JEBA PRINCY
+Register No:22008375
+
+module de06(input clk,input reset,output[0:3]counter);
+reg[0:3]counter_down;
+always@(posedge clk or posedge reset)
+begin
+if (reset)
+counter_down<=4'd0;
+else
+counter_down<=counter_down-4'd1;
+end
+assign counter=counter_down;
+endmodule
+
+### RTL FOR DOWN COUNTER
+
+![image](https://user-images.githubusercontent.com/122682918/214793343-2e7c5c74-5bb7-4f54-adab-97c2ff5c80d0.png)
+
+TIMING DIGRAM DOWN COUNTER
+
+![image](https://user-images.githubusercontent.com/122682918/214793569-b557b6d7-36a1-4430-b7dd-dcb1d879ccf2.png)
+
+TRUTH TABLE FOR DOWN COUNTER
+
+![image](https://user-images.githubusercontent.com/122682918/214793763-2302320d-5d6b-41a0-a84a-b5d703b63a5c.png)
 
 
 ### RESULTS 
+
+Hence the Four bit Up counter and Down counter is implemented successfully and its functionality is validated.
